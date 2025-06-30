@@ -30,3 +30,13 @@ jobs:
             with:
                artifact_name: "build-artifact-develop"
                token: ${{github.token}}
+
+      steps:
+         - name: Checkout repository
+           uses: actions/checkout@v4
+         - name: Building the website using Parcel #for building the website
+            run: npx parcel build "./src/*.html" --dist-dir "./dist"
+         - name: Upload Build Artifacts
+           uses: actions/upload-pages-artifacts@v3
+           with:
+              path: "./dist"
