@@ -1,0 +1,9 @@
+{
+    "rules": {
+        "declaration-block-no-duplicate-properties": true,
+        "no-duplicate-selectors": true,
+        "value-keyboard-case": "lover",
+        "selector-type-case": "lover",
+        "block-no-empty": true
+    }
+}
